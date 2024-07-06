@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Projects for Beginners</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>ficTECH-Docs</h1>
+            <nav>
+                <ul>
+                    <li><a href="#led-blink">LED Blink</a></li>
+                    <li><a href="#button-controlled-led">Button Controlled LED</a></li>
+                    <li><a href="#potentiometer-controlled-led-brightness">Potentiometer Controlled LED Brightness</a></li>
+                    <li><a href="#temperature-sensor">Temperature Sensor (LM35)</a></li>
+                    <li><a href="#servo-motor-control">Servo Motor Control</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <div class="box" id="led-blink">
+                <h2>LED Blink</h2>
+                <h3>Components Needed:</h3>
+                <ul>
+                    <li>Arduino board</li>
+                    <li>LED</li>
+                    <li>220-ohm resistor</li>
+                    <li>Breadboard</li>
+                    <li>Jumper wires</li>
+                </ul>
+                <h3>Steps:</h3>
+                <ol>
+                    <li>Connect the LED's anode (longer leg) to a digital pin (e.g., pin 13) through a 220-ohm resistor.</li>
+                    <li>Connect the LED's cathode (shorter leg) to the ground (GND) on the Arduino.</li>
+                    <li>Upload the following code to the Arduino:</li>
+                </ol>
+                <pre><code>void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}</code></pre>
+            </div>
+            
+            <!-- Repeat the above structure for each project -->
+            
+        </main>
+        <aside class="toc">
+            <h2>On this page</h2>
+            <nav>
+                <ul>
+                    <li><a href="#led-blink">LED Blink</a></li>
+                    <li><a href="#button-controlled-led">Button Controlled LED</a></li>
+                    <li><a href="#potentiometer-controlled-led-brightness">Potentiometer Controlled LED Brightness</a></li>
+                    <li><a href="#temperature-sensor">Temperature Sensor (LM35)</a></li>
+                    <li><a href="#servo-motor-control">Servo Motor Control</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
