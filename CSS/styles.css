@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .container {
     display: flex;
@@ -24,7 +27,17 @@ body {
     font-size: 24px;
     margin-bottom: 20px;
 }
+.sidebar h1 a{
+    text-decoration: none;
+    color:#ff6b6b ;
+}
 
+.sidebar h1 img{
+    width: 50px;
+}
+.sidebar h1 img svg{
+    color: white;
+}
 .sidebar nav ul {
     list-style: none;
     padding: 0;
@@ -147,7 +160,7 @@ code {
     color: #ff6b6b;
 }
 
-
+/* 
 @media (max-width:1000px) {
     .sidebar{
         display: none;
@@ -158,4 +171,4 @@ code {
     .content{
         width: 100%;
     }
-}
+} */
