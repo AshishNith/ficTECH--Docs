@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L298 Motor Driver Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1><a href="https://ashishnith.github.io/MyWebsite/">Ashish Ranjan <i class="ri-arrow-right-up-line"></i></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Arduino</a></li>
+                    <li><a href="MotorDriver.html">L298N Motor Driver</a></li>
+                    <li><a href="Sim900A.html">SIM900A GSM Module</a></li>
+                    <li><a href="ir.html">IR Sensor</a></li>
+                    <li><a href="hc-sr04.html">HC-SR04 Ultrasonic Sensor</a></li>
+                    <li><a href="servo-motor.html">Servo Motor (SG90)</a></li>
+                    <li><a href="joystick.html">Joystick</a></li>
+                    <li><a href="nrf24l01.html">NRF24L01 Transceiver Module</a></li>
+                    <li><a href="hc-05.html">HC-05 Bluetooth Module</a></li>
+                    <!-- Add more links for other components/modules as needed -->
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <div class="box head">
+                <div class="heading">Servo Motor</div>
+            </div>
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>Hey there! Ever wondered how robots move their arms or how doors open automatically? That's where servo motors like the SG90 come into play. These compact motors are super versatile and can rotate precisely to specific angles, making them perfect for all kinds of projects. Let's dive into everything you need to know about the SG90 servo motor!</p>
+                <img src="images/servo-main.png" alt="">
+            </section>
+    
+          
+    
+            <section id="what-is-servo-motor">
+                <h2>1. What is a Servo Motor?</h2>
+                <p>A servo motor is a type of motor that can rotate to a specific angle with high precision. It uses a control signal to determine the position where it should rotate. Servo motors are commonly used in robotics, remote control systems, and automation.</p>
+            </section>
+    
+            <section id="overview">
+                <h2>2. Overview of SG90 Servo Motor</h2>
+                <p>The SG90 is a popular and inexpensive servo motor that's easy to use with microcontrollers like Arduino. It's small in size but packs a punch when it comes to precise movements. Let's explore its features!</p>
+    
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Operating Voltage: 4.8V - 6V</li>
+                    <li>Torque: 1.8 kg/cm</li>
+                    <li>Speed: 0.12 sec/60°</li>
+                    <li>Rotation Range: 0° - 180°</li>
+                </ul>
+            </section>
+    
+            <section id="pin-configuration">
+                <h2>3. Pin Configuration</h2>
+                <p>The SG90 servo motor typically has three wires that control its operation. Here’s what each pin does:</p>
+    
+                <h3>Pins Description</h3>
+                <ul>
+                    <li><strong>Brown/Black Wire</strong>: Connects to ground (GND).</li>
+                    <li><strong>Red Wire</strong>: Connects to the positive voltage supply (VCC).</li>
+                    <li><strong>Orange/Yellow Wire</strong>: Signal wire (control input).</li>
+                </ul>
+                <img src="images/servo-pins.png" alt="">
+            </section>
+    
+            <section id="how-it-works">
+                <h2>4. How It Works</h2>
+                <p>The SG90 servo motor works based on the principle of pulse-width modulation (PWM). It receives control signals from a microcontroller (like Arduino) to determine its position. Here’s a simple breakdown of how it operates:</p>
+    
+                <h3>Operation Steps</h3>
+                <ol>
+                    <li><strong>Control Signal</strong>: The microcontroller sends a PWM signal to the servo motor.</li>
+                    <li><strong>Positioning</strong>: The PWM signal determines the angle at which the servo motor shaft should rotate.</li>
+                    <li><strong>Feedback</strong>: The servo motor has built-in feedback mechanisms that adjust its position based on the PWM signal received.</li>
+                </ol>
+                <img src="images/Servo-sketch.png" alt="">
+
+            </section>
+    
+            <section id="wiring-and-connections">
+                <h2>5. Wiring and Connections</h2>
+                <p>Let’s get you connected to the SG90 servo motor. Here’s how you can hook it up to an Arduino:</p>
+    
+                <h3>Components Needed</h3>
+                <ul>
+                    <li>SG90 Servo Motor</li>
+                    <li>Arduino Board</li>
+                    <li>Connecting Wires</li>
+                </ul>
+    
+                <h3>Wiring Diagram</h3>
+                <ol>
+                    <li>Connect the <strong>Brown/Black wire</strong> to the GND pin on the Arduino.</li>
+                    <li>Connect the <strong>Red wire</strong> to the 5V pin on the Arduino.</li>
+                    <li>Connect the <strong>Orange/Yellow wire</strong> to a PWM-enabled pin on the Arduino (e.g., pin 9).</li>
+                </ol>
+    
+                <h3>Example Schematic</h3>
+                <pre>
+    Arduino       SG90 Servo Motor
+    -----------------------------
+    GND     ->    Brown/Black Wire
+    5V      ->    Red Wire
+    Pin 9   ->    Orange/Yellow Wire
+                </pre>
+            </section>
+    
+            <section id="example-applications">
+                <h2>6. Example Applications</h2>
+                <p>The SG90 servo motor is incredibly versatile. Here are some exciting applications where you can use it:</p>
+    
+                <h3>Robotics</h3>
+                <ul>
+                    <li><strong>Robotic Arms</strong>: Control the movement of robot arms.</li>
+                    <li><strong>Pan-and-Tilt Mechanisms</strong>: Precisely adjust the position of cameras.</li>
+                </ul>
+    
+                <h3>Automation</h3>
+                <ul>
+                    <li><strong>Door Locks</strong>: Open and close doors automatically.</li>
+                    <li><strong>Remote-Controlled Toys</strong>: Power movement in toy cars and planes.</li>
+                </ul>
+            </section>
+    
+            <section id="code-examples">
+                <h2>7. Code Examples for Arduino</h2>
+                <p>Let's write some code to control the SG90 servo motor with Arduino. Below is a simple example to get you started:</p>
+    
+                <h3>Basic Example to Control SG90 Servo Motor</h3>
+                <pre>
+    #include &lt;Servo.h&gt;
+    
+    Servo myServo;  // Create a servo object
+    
+    void setup() {
+      myServo.attach(9);  // Attach the servo to pin 9
+    }
+    
+    void loop() {
+      myServo.write(0);   // Move servo to 0 degrees
+      delay(1000);        // Wait for 1 second
+      myServo.write(90);  // Move servo to 90 degrees
+      delay(1000);        // Wait for 1 second
+      myServo.write(180); // Move servo to 180 degrees
+      delay(1000);        // Wait for 1 second
+    }
+                </pre>
+                <img src="images/servo-arduino.png" alt="">
+
+            </section>
+    
+            <section id="troubleshooting">
+                <h2>8. Troubleshooting</h2>
+                <h3>Common Issues</h3>
+                <ul>
+                    <li><strong>Motor not moving</strong>: Check wiring connections and ensure the servo is powered correctly.</li>
+                    <li><strong>Jittery movements</strong>: Ensure the PWM signal is stable and not fluctuating.</li>
+                    <li><strong>Incorrect angle</strong>: Verify the servo library functions and the angle values you're sending.</li>
+                </ul>
+    
+            </section>
+        </main>
+        <aside class="toc">
+            <h2>On this Page</h2>
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#what-is-motor-driver">What is a Motor Driver?</a></li>
+                    <li><a href="#overview-l298">Overview of L298 Motor Driver</a></li>
+                    <li><a href="#pin-configuration">Pin Configuration</a></li>
+                    <li><a href="#working-principle">Working Principle</a></li>
+                    <li><a href="#wiring-connections">Wiring and Connections</a></li>
+                    <li><a href="#example-applications">Example Applications</a></li>
+                    <li><a href="#code-examples">Code Examples for Arduino</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</body>
+</html>
