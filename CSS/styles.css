@@ -78,6 +78,9 @@ html {
     background-color: #030308;
     
 }
+.content::-webkit-scrollbar {
+    display: none;
+}
 .heading{
     text-align: center;
     font-size: 80px;
