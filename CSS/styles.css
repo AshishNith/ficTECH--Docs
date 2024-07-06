@@ -21,6 +21,17 @@ html {
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     overflow-y: auto;
 }
+.headline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headline a{
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 30px;
+    color: #ff6b6b;
+}
 
 .sidebar h1 {
     color: #ff6b6b;
