@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluetooth Module HC-05  Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="headline">
+            <h1><a href="https://ashishnith.github.io/MyWebsite/">Ashish Ranjan <i class="ri-arrow-right-up-line"></i></a></h1>
+            <a href="https://ashishnith.github.io/ficTECH--Docs/"><i class="ri-home-2-line"></i></a>
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Arduino</a></li>
+                    <li><a href="MotorDriver.html">L298N Motor Driver</a></li>
+                    <li><a href="Sim900A.html">SIM900A GSM Module</a></li>
+                    <li><a href="ir.html">IR Sensor</a></li>
+                    <li><a href="servo-motor.html">Servo Motor (SG90)</a></li>
+                    <li><a href="hc-sr04.html">HC-SR04 Ultrasonic Sensor</a></li>
+                    <li><a href="joystick.html">Joystick</a></li>
+                    <li><a href="nrf24l01.html">NRF24L01 Transceiver Module</a></li>
+                    <li><a href="hc-05.html">HC-05 Bluetooth Module</a></li>
+                    <!-- Add more links for other components/modules as needed -->
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+
+            <div class="box head">
+
+                <div class="heading">Bluetooth Module--HC-05</div>
+            </div>
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>Ever wanted to add wireless communication to your projects? The HC-05 Bluetooth module is perfect for the job! This module allows you to establish a serial communication connection between your microcontroller (like Arduino) and any Bluetooth-enabled device, such as a smartphone or computer. In this guide,you will learn everything you need to know about the HC-05 Bluetooth module.</p>
+                <img src="images/hc05.jpg" alt="">
+            </section>
+
+            <section id="what-is-bluetooth-module">
+                <h2>1. What is a Bluetooth Module?</h2>
+                <p>A Bluetooth module is a device that enables wireless communication between two Bluetooth-enabled devices. It allows data to be transmitted over short distances without the need for wires. The HC-05 is a popular Bluetooth module used for serial communication.</p>
+            </section>
+    
+            <section id="overview">
+                <h2>2. Overview of HC-05 Bluetooth Module</h2>
+                <p>The HC-05 Bluetooth module is versatile and easy to use, making it an excellent choice for adding Bluetooth functionality to your projects. It supports both master and slave modes, enabling various communication setups.</p>
+    
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Bluetooth Specification</strong>: V2.0+EDR (Enhanced Data Rate)</li>
+                    <li><strong>Frequency</strong>: 2.4GHz ISM band</li>
+                    <li><strong>Modulation</strong>: GFSK (Gaussian Frequency Shift Keying)</li>
+                    <li><strong>Range</strong>: Up to 10 meters</li>
+                    <li><strong>Operating Voltage</strong>: 3.3V to 5V</li>
+                    <li><strong>Serial Communication</strong>: UART (Universal Asynchronous Receiver-Transmitter)</li>
+                </ul>
+            </section>
+    
+            <section id="pin-configuration">
+                <h2>3. Pin Configuration</h2>
+                <img src="images/hc051-pins.jpg" alt="">
+                <p>The HC-05 Bluetooth module typically has six pins. Here’s what each pin does:</p>
+    
+                <h3>Pins Description</h3>
+                <ul>
+                    <li><strong>EN (Enable)</strong>: Used to toggle between AT command mode and data mode.</li>
+                    <li><strong>VCC</strong>: Connects to the power supply (3.3V to 5V).</li>
+                    <li><strong>GND</strong>: Connects to the ground.</li>
+                    <li><strong>TXD</strong>: Transmits serial data.</li>
+                    <li><strong>RXD</strong>: Receives serial data.</li>
+                    <li><strong>STATE</strong>: Indicates the module’s state (connected or not).</li>
+                </ul>
+            </section>
+    
+            <section id="how-it-works">
+                <h2>4. How It Works</h2>
+                <p>The HC-05 module works by establishing a serial communication link between two devices. It can operate in two modes:</p>
+                <ul>
+                    <li><strong>Data Mode</strong>: Used for normal communication between devices.</li>
+                    <li><strong>AT Command Mode</strong>: Used to configure the module’s settings (e.g., changing the name, baud rate, or role).</li>
+                </ul>
+    
+                <h3>Operation Steps</h3>
+                <ol>
+                    <li><strong>Power On</strong>: Connect the module to the power supply.</li>
+                    <li><strong>Pairing</strong>: Pair the module with a Bluetooth-enabled device.</li>
+                    <li><strong>Communication</strong>: Exchange data between the paired devices.</li>
+                </ol>
+                <img src="images/hc-05-2.webp" alt="">
+
+            </section>
+    
+            <section id="wiring-and-connections">
+                <h2>5. Wiring and Connections</h2>
+                <p>Let’s get you connected to the HC-05 Bluetooth module. Here’s how you can hook it up to an Arduino:</p>
+    
+                <h3>Components Needed</h3>
+                <ul>
+                    <li>HC-05 Bluetooth Module</li>
+                    <li>Arduino Board</li>
+                    <li>Connecting Wires</li>
+                </ul>
+    
+                <h3>Wiring Diagram</h3>
+                <ol>
+                    <li>Connect <strong>VCC</strong> to the 5V pin on the Arduino.</li>
+                    <li>Connect <strong>GND</strong> to the ground pin on the Arduino.</li>
+                    <li>Connect <strong>TXD</strong> to the RX pin on the Arduino (e.g., pin 10).</li>
+                    <li>Connect <strong>RXD</strong> to the TX pin on the Arduino (e.g., pin 11).</li>
+                    <li>Connect <strong>EN</strong> to 3.3V (optional, used for entering AT command mode).</li>
+                </ol>
+    
+                <h3>Example Schematic</h3>
+                <pre>
+    Arduino       HC-05 Bluetooth Module
+    ------------------------------------
+    5V      ->    VCC
+    GND     ->    GND
+    Pin 10  ->    TXD
+    Pin 11  ->    RXD
+    3.3V    ->    EN (optional)
+                </pre>
+                <img src="images/hc-05-3.webp" alt="">
+
+            </section>
+    
+            <section id="example-applications">
+                <h2>6. Example Applications</h2>
+                <p>The HC-05 Bluetooth module can be used in a wide range of applications. Here are some examples:</p>
+    
+                <h3>Wireless Control</h3>
+                <ul>
+                    <li><strong>Remote Control</strong>: Control robots, cars, or other devices wirelessly.</li>
+                    <li><strong>Home Automation</strong>: Control lights, appliances, or other home systems from your smartphone.</li>
+                </ul>
+    
+                <h3>Data Transmission</h3>
+                <ul>
+                    <li><strong>Sensor Data</strong>: Send sensor data to your phone or computer for monitoring and analysis.</li>
+                    <li><strong>Wireless Communication</strong>: Establish communication between two microcontrollers.</li>
+                </ul>
+            </section>
+    
+            <section id="code-examples">
+                <h2>7. Code Examples for Arduino</h2>
+                <p>Let’s write some code to communicate with the HC-05 Bluetooth module using Arduino. Below is a simple example to get you started:</p>
+    
+                <h3>Basic Example to Send and Receive Data</h3>
+                <pre>
+    #include &lt;SoftwareSerial.h&gt; // <a href="software-serial.html">SoftwareSerial-documentations</a>
+    
+    // Define pins for software serial communication
+    SoftwareSerial Bluetooth(10, 11); // RX, TX
+    
+    void setup() {
+      // Start serial communication with the computer
+      Serial.begin(9600);
+      
+      // Start software serial communication with the Bluetooth module
+      Bluetooth.begin(9600);
+      
+      Serial.println("Bluetooth Module HC-05 is ready");
+    }
+    
+    void loop() {
+      // Check if data is available on the Bluetooth module
+      if (Bluetooth.available()) {
+        char data = Bluetooth.read(); // Read data from the Bluetooth module
+        Serial.print("Received: ");
+        Serial.println(data); // Print the received data to the Serial Monitor
+      }
+      
+      // Check if data is available on the Serial Monitor
+      if (Serial.available()) {
+        char data = Serial.read(); // Read data from the Serial Monitor
+        Bluetooth.print(data); // Send data to the Bluetooth module
+      }
+    }
+                </pre>
+            </section>
+    
+            <section id="troubleshooting">
+                <h2>8. Troubleshooting</h2>
+    
+                <h3>Common Issues</h3>
+                <ul>
+                    <li><strong>No Response</strong>: Ensure the module is powered correctly and the connections are secure.</li>
+                    <li><strong>Unable to Pair</strong>: Check if the module is in discoverable mode and the device's Bluetooth is enabled.</li>
+                    <li><strong>Erratic Data</strong>: Ensure the baud rates of the Bluetooth module and the microcontroller match.</li>
+                </ul>
+    
+                <p>This guide should help you get started with the HC-05 Bluetooth module in your projects. Have fun adding wireless communication and creating exciting Bluetooth-enabled devices! If you have any questions, feel free to ask. Happy tinkering!</p>
+            </section>
+        </main>
+        <aside class="toc">
+            <h2>On this page</h2>
+            <nav>
+                <ul>
+                    <li><a href="#what-is-bluetooth-module">What is a Bluetooth Module?</a></li>
+                    <li><a href="#overview">Overview of HC-05 Bluetooth Module</a></li>
+                    <li><a href="#pin-configuration">Pin Configuration</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#wiring-and-connections">Wiring and Connections</a></li>
+                    <li><a href="#example-applications">Example Applications</a></li>
+                    <li><a href="#code-examples">Code Examples for Arduino</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
